@@ -1,6 +1,5 @@
 defmodule GraphTest do
   use ExUnit.Case, async: false
-  require Logger
 
   describe "get_paths!/3; single vertex graph:" do
     setup do
