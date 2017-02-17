@@ -1,7 +1,7 @@
-defmodule Graph.Algo.Root do
+defmodule ExGraph.Algo.Root do
   use GenServer
 
-  alias Graph.Algo.Bacteria
+  alias ExGraph.Algo.Bacteria
   require Logger
   @server __MODULE__
 

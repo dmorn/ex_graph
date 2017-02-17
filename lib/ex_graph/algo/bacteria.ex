@@ -1,6 +1,6 @@
-defmodule Graph.Algo.Bacteria do
-  alias Graph.Algo.Bacteria
-  alias Graph.Algo.Root
+defmodule ExGraph.Algo.Bacteria do
+  alias ExGraph.Algo.Bacteria
+  alias ExGraph.Algo.Root
 
   defstruct [:graph, :curr_node, :goal, path: []]
 
@@ -18,7 +18,7 @@ defmodule Graph.Algo.Bacteria do
   def infect(state) do
     if !Enum.member?(state.path, state.curr_node) do
       state.graph
-      |> Graph.get_neighbours(state.curr_node)
+      |> ExGraph.get_neighbours(state.curr_node)
       |> Enum.each(fn node -> Root.generate(%{state | path: state.path ++ [state.curr_node], curr_node: node}) end)
     end
   end

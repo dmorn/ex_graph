@@ -1,8 +1,8 @@
-defmodule Graph.Mixfile do
+defmodule ExGraph.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :graph,
+    [app: :ex_graph,
      version: "0.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
@@ -16,7 +16,7 @@ defmodule Graph.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
-     mod: {Graph, []}]
+     mod: {ExGraph, []}]
   end
 
   # Dependencies can be Hex packages:

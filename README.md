@@ -1,4 +1,4 @@
-# Graph
+# ExGraph
 
 **TODO: Add description**
 

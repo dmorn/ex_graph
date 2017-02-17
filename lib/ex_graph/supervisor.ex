@@ -1,7 +1,7 @@
-defmodule Graph.Supervisor do
+defmodule ExGraph.Supervisor do
   @moduledoc false
   use Supervisor
-  alias Graph.Algo.Root
+  alias ExGraph.Algo.Root
 
   @doc false
   def start_link() do

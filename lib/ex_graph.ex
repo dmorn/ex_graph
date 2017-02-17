@@ -1,13 +1,13 @@
-defmodule Graph do
+defmodule ExGraph do
   @moduledoc """
-  `Graph` presents some useful functions for dealing with digraphs.
+  `ExGraph` presents some useful functions for dealing with digraphs.
   """
   use Application
-  alias Graph.Algo.Root
+  alias ExGraph.Algo.Root
   require Logger
 
   @doc false
-  def start(_type, _args), do: Graph.Supervisor.start_link()
+  def start(_type, _args), do: ExGraph.Supervisor.start_link()
 
   def new(), do: :digraph.new()
 
