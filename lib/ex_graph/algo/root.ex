@@ -72,10 +72,11 @@ defmodule ExGraph.Algo.Root do
     {:noreply, %{state | refs: MapSet.put(state.refs, ref)}}
   end
 
-  @doc false
-  # Called when a `Bacteria` process, previously monitered, died. This happens when the process is done
-  # with it's computations, i.e. it generated a `Bacteria` for each neightbour that it has or it found
-  # the end of the path.
+  @doc """
+  Called when a `Bacteria` process, previously monitered, died. This happens when the process is done
+  with it's computations, i.e. it generated a `Bacteria` for each neightbour that it has or it found
+  the end of the path.
+  """
   def handle_info({:DOWN, ref, :process, _pid, :normal}, state) do
     refs = MapSet.delete(state.refs, ref)
 
